@@ -19,9 +19,16 @@ describe('tennis game', function () {
         tennis.firstPlayerScore()
         scoreShouldBe('fifteen love');
     });
+
+    function givenFirstPlayerScore(times: number) {
+        for (let i = 0; i < times; i++) {
+            tennis.firstPlayerScore()
+
+        }
+    }
+
     it('should be thirty love', function () {
-        tennis.firstPlayerScore()
-        tennis.firstPlayerScore()
+        givenFirstPlayerScore(2);
         scoreShouldBe('thirty love');
     });
 
